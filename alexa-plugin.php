@@ -11,7 +11,7 @@ if ($hostname == FALSE) {
 $interval=getenv('COLLECTD_INTERVAL');
 
 if ($interval == FALSE) {
-  $interval = 60;
+  $interval = 60 * 60;
 }
 
 $sites = array(
