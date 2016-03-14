@@ -38,7 +38,7 @@ while (TRUE) {
   
   foreach ($sites as $site) {
     preg_match("/($site).+?<td>([0-9]+)<\/td>/", $chess_links, $val);
-    $str = "PUTVAL \"$hostname/alexa/counter-" . safe($site) . "\" interval=$interval N:" .$val[2] ."\n";
+    $str = "PUTVAL \"$hostname/alexa/gauge-" . safe($site) . "\" interval=$interval N:" .$val[2] ."\n";
     // print_r(safe($site) . ".value ".$val[2]."\n");
     print_r($str);
   }
